@@ -40,18 +40,18 @@ server.route({
     let resource_contact;
 
     if(request.query.Body.includes("Alcohol addiction")){
-        resource_name = "Alcohol addiction Center";
-        resource_contact = "123-345-6789";
+        resource_name = "Alcohol Addiction Center";
+        resource_contact = "1-844-261-0347";
     }
 
     if(request.query.Body.includes("Domestic violence")){
-        resource_name = "Domestic Violence help center";
-        resource_contact = "123-345-6789";
+        resource_name = "Domestic Violence Help Center";
+        resource_contact = "1-877-988-5559";
     }
 
     if(request.query.Body.includes("Drug abuse")){
         resource_name = "Drug Abuse Help Center";
-        resource_contact = "123-345-6789";
+        resource_contact = "1-877-367-2510";
     }
     
         //console.log(request.query.From);
