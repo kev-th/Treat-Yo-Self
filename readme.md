@@ -1,2 +1,1 @@
-# website:
-## http://www.treatyoselfapp.info/
+# website: http://www.treatyoselfapp.info/
