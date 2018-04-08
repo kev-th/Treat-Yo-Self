@@ -5,4 +5,4 @@
 ## How to run app?
  
 ### Follow this link:
-#### https://www.twilio.com/docs/sms/quickstart/python
+#### https://www.twilio.com/docs/sms/quickstart/node
