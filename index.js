@@ -18,7 +18,6 @@ var client = new twilio(accountSid, authToken);
 
 const server = Hapi.server({
     port: port,
-    host: 'localhost'
 });
 
 server.route({
