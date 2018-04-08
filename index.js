@@ -1,5 +1,5 @@
 'use strict';
-
+const port = process.env.PORT || 5000;
 const Hapi = require('hapi');
 var twilio = require('twilio');
 
@@ -17,16 +17,25 @@ var client = new twilio(accountSid, authToken);
 // .then((message) => console.log(message.sid));
 
 const server = Hapi.server({
-    port: 5000,
+    port: port,
     host: 'localhost'
+});
+
+server.routee({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+       return h.file('./public/hello.html');
+    }
+
 });
 
 server.route({
     method: 'GET',
-    path: '/',
+    path: '/response',
     handler: (request, h) => {
 
-    console.log(request);
+    //console.log(request);
     let resource_name;
     let resource_contact;
 
