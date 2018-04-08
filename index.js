@@ -18,6 +18,7 @@ var client = new twilio(accountSid, authToken);
 
 const server = Hapi.server({
     port: port,
+
 });
 
 server.route({
@@ -64,15 +65,6 @@ server.route({
     }
 });
 
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: (request, h) => {
-
-        console.log( 'Hello, '  + '!');
-        
-    }
-});
 
 const init = async () => {
 
@@ -86,6 +78,17 @@ const init = async () => {
             return h.file('./public/hello.html');
         }
     });
+
+    server.route({
+        path: "/resources/{path*}",
+        method: "GET",
+        handler: {
+            directory: {
+                path: "./resources",
+                listing: false,
+                index: false
+            }
+        }});
 
     await server.start();
     console.log(`Server running at: ${server.info.uri}`);
