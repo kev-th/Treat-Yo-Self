@@ -21,7 +21,7 @@ const server = Hapi.server({
     host: 'localhost'
 });
 
-server.routee({
+server.route({
     method: 'GET',
     path: '/',
     handler: (request, h) => {
